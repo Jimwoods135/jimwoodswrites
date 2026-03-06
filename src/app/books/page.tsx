@@ -7,13 +7,13 @@ export const metadata: Metadata = {
     "Browse all 9 books by Jim Woods, including business and productivity titles, westerns, and crime novels. Plus: Story Builder, coming soon.",
 };
 
-// TODO: Replace with real Amazon URL
-const AMAZON_URL = "https://amazon.com/author/jimwoods";
-const TIDYCAL_URL = "https://tidycal.com/jimwoods";
+
+const AMAZON_URL = "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS";
+const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
 
 const serif = { fontFamily: "var(--font-dm-serif), Georgia, serif" };
 
-// TODO: Replace titles, descriptions, and cover images with real data in Phase 2
+
 const businessBooks = [
   {
     title: "Business Book Title One",

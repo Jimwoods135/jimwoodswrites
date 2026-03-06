@@ -7,14 +7,14 @@ export const metadata: Metadata = {
     "The Story Builder podcast with Jim Woods — writing craft and self-publishing insights for non-fiction authors. Available on YouTube and Spotify.",
 };
 
-// TODO: Replace with real URLs
-const YOUTUBE_URL = "https://youtube.com/@storybuilder";
-const SPOTIFY_URL = "https://open.spotify.com/show/storybuilder";
-const TIDYCAL_URL = "https://tidycal.com/jimwoods";
+
+const YOUTUBE_URL = "https://www.youtube.com/playlist?list=PL82pjZmiW62RvcvYgytT-EJr_xfV9eZXJ";
+const SPOTIFY_URL = "https://open.spotify.com/show/5l20jU0Nc7BAXxvQBr69JZ";
+const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
 
 const serif = { fontFamily: "var(--font-dm-serif), Georgia, serif" };
 
-// TODO: Replace with real episode data in Phase 2
+
 const episodes = [
   {
     number: "001",

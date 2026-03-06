@@ -12,8 +12,8 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-// TODO: Replace with real TidyCal URL
-const TIDYCAL_URL = "https://tidycal.com/jimwoods";
+
+const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

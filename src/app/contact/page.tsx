@@ -7,9 +7,8 @@ export const metadata: Metadata = {
     "Book a free discovery call with Jim Woods or send him a message. Based in Cuyahoga Falls, Ohio — serving authors locally and nationwide.",
 };
 
-// TODO: Replace with real URLs and email
-const TIDYCAL_URL = "https://tidycal.com/jimwoods";
-const EMAIL = "jim@jimwoodswrites.com"; // TODO: Confirm real email address
+const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
+const EMAIL = "Jimwoodswrites@gmail.com";
 
 const serif = { fontFamily: "var(--font-dm-serif), Georgia, serif" };
 

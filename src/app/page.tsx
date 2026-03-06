@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-// TODO: Replace with real URLs
-const TIDYCAL_URL = "https://tidycal.com/jimwoods";
-const SUBSTACK_URL = "https://jimwoods.substack.com";
-const AMAZON_URL = "https://amazon.com/author/jimwoods";
-const YOUTUBE_URL = "https://youtube.com/@storybuilder";
-const SPOTIFY_URL = "https://open.spotify.com/show/storybuilder";
-const LINKEDIN_URL = "https://linkedin.com/in/jimwoods";
+
+const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
+const SUBSTACK_URL = "https://authorjimwoods.substack.com/";
+const AMAZON_URL = "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS";
+const YOUTUBE_URL = "https://www.youtube.com/playlist?list=PL82pjZmiW62RvcvYgytT-EJr_xfV9eZXJ";
+const SPOTIFY_URL = "https://open.spotify.com/show/5l20jU0Nc7BAXxvQBr69JZ";
+const LINKEDIN_URL = "https://www.linkedin.com/in/jimwoodspage";
 
 const services = [
   {

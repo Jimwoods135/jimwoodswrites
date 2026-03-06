@@ -7,8 +7,8 @@ export const metadata: Metadata = {
     "Book coaching, developmental editing, formatting, self-publishing services, and book consulting for non-fiction and fiction authors.",
 };
 
-// TODO: Replace with real TidyCal URL
-const TIDYCAL_URL = "https://tidycal.com/jimwoods";
+
+const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
 
 const serif = { fontFamily: "var(--font-dm-serif), Georgia, serif" };
 

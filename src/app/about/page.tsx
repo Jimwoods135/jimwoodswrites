@@ -7,10 +7,10 @@ export const metadata: Metadata = {
     "Jim Woods is a published author and book publishing consultant based in Cuyahoga Falls, Ohio — with 9 books and years of hands-on self-publishing experience.",
 };
 
-// TODO: Replace with real URLs
-const TIDYCAL_URL = "https://tidycal.com/jimwoods";
-const LINKEDIN_URL = "https://linkedin.com/in/jimwoods";
-const AMAZON_URL = "https://amazon.com/author/jimwoods";
+
+const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/jimwoodspage";
+const AMAZON_URL = "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS";
 
 const serif = { fontFamily: "var(--font-dm-serif), Georgia, serif" };
 
