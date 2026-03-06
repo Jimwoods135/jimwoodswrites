@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Books | Jim Woods — Author",
@@ -7,47 +8,41 @@ export const metadata: Metadata = {
     "Browse all 9 books by Jim Woods, including business and productivity titles, westerns, and crime novels. Plus: Story Builder, coming soon.",
 };
 
-
 const AMAZON_URL = "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS";
 const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
 
 const serif = { fontFamily: "var(--font-dm-serif), Georgia, serif" };
 
-
 const businessBooks = [
   {
-    title: "Business Book Title One",
-    subtitle: "A subtitle that describes the book",
-    year: "2021",
-    description:
-      "A practical guide to [topic] for professionals who want to [outcome]. Placeholder description — will be updated with real copy in Phase 2.",
+    title: "Focus Booster",
+    cover: "/book-focus-booster.webp",
+    description: "Placeholder description — will be updated with real copy.",
   },
   {
-    title: "Business Book Title Two",
-    subtitle: "A subtitle that describes the book",
-    year: "2022",
-    description:
-      "An actionable framework for [topic] that helps readers [outcome]. Placeholder description — will be updated with real copy in Phase 2.",
+    title: "Ready Aim Fire",
+    cover: "/book-ready-aim-fire.webp",
+    description: "Placeholder description — will be updated with real copy.",
   },
 ];
 
 const westerns = [
-  { title: "Western Novel One", year: "2018" },
-  { title: "Western Novel Two", year: "2019" },
-  { title: "Western Novel Three", year: "2020" },
-  { title: "Western Novel Four", year: "2021" },
+  { title: "Red Rock Justice", cover: "/book-red-rock-justice.webp" },
+  { title: "Standoff at Sundown", cover: "/book-standoff-at-sundown.jpg" },
+  { title: "Red Rock Vengeance", cover: "/book-red-rock-vengeance.webp" },
+  { title: "Showdown at Bone Ridge", cover: "/book-showdown-at-bone-ridge.webp" },
 ];
 
 const crimeNovels = [
-  { title: "Crime Novel One", year: "2019" },
-  { title: "Crime Novel Two", year: "2020" },
-  { title: "Crime Novel Three", year: "2022" },
+  { title: "Like a Bad Memory", cover: "/book-like-a-bad-memory.webp" },
+  { title: "Pull the Trigger", cover: "/book-pull-the-trigger.webp" },
+  { title: "Bite the Bullet", cover: "/book-bite-the-bullet.webp" },
 ];
 
-function PlaceholderCover({ className = "" }: { className?: string }) {
+function BookCover({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
   return (
-    <div className={`aspect-[2/3] rounded-lg bg-navy-800 border border-navy-700 flex items-center justify-center ${className}`}>
-      <p className="text-xs text-slate-600 text-center px-2">Book Cover</p>
+    <div className={`relative aspect-[2/3] rounded-lg overflow-hidden border border-navy-700 ${className}`}>
+      <Image src={src} alt={alt} fill className="object-cover" sizes="200px" />
     </div>
   );
 }
@@ -86,7 +81,15 @@ export default function BooksPage() {
           </p>
           <div className="flex flex-col gap-10 md:flex-row md:items-center">
             <div className="w-full max-w-[180px] flex-shrink-0">
-              <PlaceholderCover />
+              <div className="relative aspect-[2/3] rounded-lg overflow-hidden shadow-xl">
+                <Image
+                  src="/book-story-builder.jpg"
+                  alt="Story Builder by Jim Woods"
+                  fill
+                  className="object-cover"
+                  sizes="180px"
+                />
+              </div>
             </div>
             <div>
               <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1 text-xs font-medium text-accent mb-3">
@@ -120,12 +123,14 @@ export default function BooksPage() {
             {businessBooks.map((book) => (
               <div key={book.title} className="flex gap-6 items-start">
                 <div className="w-28 flex-shrink-0">
-                  <PlaceholderCover />
+                  <BookCover
+                    src={book.cover}
+                    alt={`${book.title} by Jim Woods`}
+                    className="hover:border-accent/40 transition-colors"
+                  />
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 mb-1">{book.year}</p>
                   <h3 className="text-xl text-white" style={serif}>{book.title}</h3>
-                  <p className="text-sm text-slate-500 mt-0.5 italic">{book.subtitle}</p>
                   <p className="text-sm text-slate-400 mt-3 leading-relaxed">{book.description}</p>
                   <a
                     href={AMAZON_URL}
@@ -162,9 +167,12 @@ export default function BooksPage() {
               <div className="grid grid-cols-2 gap-4">
                 {westerns.map((book) => (
                   <div key={book.title} className="group">
-                    <PlaceholderCover className="group-hover:border-accent/40 transition-colors" />
+                    <BookCover
+                      src={book.cover}
+                      alt={`${book.title} by Jim Woods`}
+                      className="group-hover:border-accent/40 transition-colors"
+                    />
                     <p className="text-sm text-white mt-2" style={serif}>{book.title}</p>
-                    <p className="text-xs text-slate-600 mt-0.5">{book.year}</p>
                   </div>
                 ))}
               </div>
@@ -178,9 +186,12 @@ export default function BooksPage() {
               <div className="grid grid-cols-2 gap-4">
                 {crimeNovels.map((book) => (
                   <div key={book.title} className="group">
-                    <PlaceholderCover className="group-hover:border-accent/40 transition-colors" />
+                    <BookCover
+                      src={book.cover}
+                      alt={`${book.title} by Jim Woods`}
+                      className="group-hover:border-accent/40 transition-colors"
+                    />
                     <p className="text-sm text-white mt-2" style={serif}>{book.title}</p>
-                    <p className="text-xs text-slate-600 mt-0.5">{book.year}</p>
                   </div>
                 ))}
               </div>

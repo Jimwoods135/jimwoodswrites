@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 
 const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
@@ -172,12 +173,14 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center gap-12 md:flex-row">
             <div className="w-full max-w-xs flex-shrink-0">
-              <div className="aspect-[2/3] rounded-lg bg-navy-800 border border-navy-600 flex items-center justify-center shadow-2xl">
-                <div className="text-center px-6">
-                  <p className="text-2xl text-white" style={serif}>Story Builder</p>
-                  <p className="text-sm text-slate-400 mt-2">Jim Woods</p>
-                  <p className="text-xs text-accent mt-4 uppercase tracking-wider">Book Cover</p>
-                </div>
+              <div className="relative aspect-[2/3] rounded-lg overflow-hidden shadow-2xl">
+                <Image
+                  src="/book-story-builder.jpg"
+                  alt="Story Builder by Jim Woods"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 320px"
+                />
               </div>
             </div>
 
@@ -236,15 +239,24 @@ export default function HomePage() {
             Business &amp; Productivity
           </p>
           <div className="grid gap-6 sm:grid-cols-2">
-            {[1, 2].map((i) => (
-              <div key={i} className="group flex gap-5 items-start">
-                <div className="w-20 flex-shrink-0 rounded-lg bg-navy-800 border border-navy-700 group-hover:border-accent/40 transition-colors overflow-hidden">
-                  <div className="aspect-[2/3] flex items-center justify-center">
-                    <p className="text-xs text-slate-600 text-center px-1">Cover</p>
+            {[
+              { title: "Focus Booster", src: "/book-focus-booster.webp" },
+              { title: "Ready Aim Fire", src: "/book-ready-aim-fire.webp" },
+            ].map((book) => (
+              <div key={book.title} className="group flex gap-5 items-start">
+                <div className="w-20 flex-shrink-0 rounded-lg overflow-hidden border border-navy-700 group-hover:border-accent/40 transition-colors">
+                  <div className="relative aspect-[2/3]">
+                    <Image
+                      src={book.src}
+                      alt={`${book.title} by Jim Woods`}
+                      fill
+                      className="object-cover"
+                      sizes="80px"
+                    />
                   </div>
                 </div>
                 <div className="pt-1">
-                  <p className="text-white" style={serif}>Book Title {i}</p>
+                  <p className="text-white" style={serif}>{book.title}</p>
                   <p className="text-xs text-slate-500 mt-1">Business / Productivity</p>
                   <a
                     href={AMAZON_URL}
@@ -292,11 +304,14 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col gap-12 md:flex-row md:items-center">
             <div className="w-full max-w-sm flex-shrink-0">
-              <div className="aspect-square rounded-2xl bg-navy-800 border border-navy-700 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-28 h-28 rounded-full bg-navy-700 mx-auto mb-3" />
-                  <p className="text-xs text-slate-600">Headshot Placeholder</p>
-                </div>
+              <div className="relative aspect-square rounded-2xl overflow-hidden">
+                <Image
+                  src="/headshot.jpg"
+                  alt="Jim Woods — Author and Book Publishing Consultant"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 384px"
+                />
               </div>
             </div>
 

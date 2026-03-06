@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Jim Woods | Author & Book Publishing Consultant",
@@ -37,11 +38,15 @@ export default function AboutPage() {
           <div className="flex flex-col gap-12 md:flex-row md:items-start">
             {/* Photo placeholder */}
             <div className="w-full max-w-xs flex-shrink-0">
-              <div className="aspect-[3/4] rounded-2xl bg-navy-800 border border-navy-700 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-28 h-28 rounded-full bg-navy-700 mx-auto mb-3" />
-                  <p className="text-xs text-slate-600">Headshot Placeholder</p>
-                </div>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
+                <Image
+                  src="/headshot.jpg"
+                  alt="Jim Woods — Author and Book Publishing Consultant"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 320px"
+                  priority
+                />
               </div>
               <div className="mt-6 space-y-3">
                 <a
