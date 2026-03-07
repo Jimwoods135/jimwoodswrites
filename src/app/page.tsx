@@ -85,9 +85,9 @@ export default function HomePage() {
             <span className="italic">into the world.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-slate-400 leading-relaxed">
-            Jim Woods is a published author and consulting guide for aspiring
-            non-fiction writers — offering book coaching, developmental editing,
-            formatting, and self-publishing services.
+            I&apos;m a published author and guide for aspiring non-fiction writers — offering
+            book coaching, developmental editing, formatting, and self-publishing services
+            to help you get your book written and published.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
@@ -276,10 +276,10 @@ export default function HomePage() {
               Also by Jim Woods
             </p>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Jim is also the author of{" "}
+              I&apos;ve also written{" "}
               <strong className="text-slate-300">4 western novels</strong> and{" "}
-              <strong className="text-slate-300">3 crime novels</strong> — demonstrating his range
-              as a writer and his deep familiarity with the storytelling craft.
+              <strong className="text-slate-300">3 crime novels</strong> — proof that the process
+              I teach is one I&apos;ve lived across every genre.
             </p>
             <a
               href={AMAZON_URL}
@@ -319,13 +319,13 @@ export default function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">About Jim</p>
               <h2 className="text-4xl text-white mb-6" style={serif}>A writer who helps writers.</h2>
               <p className="text-slate-400 leading-relaxed mb-4">
-                Jim Woods is a published author and book publishing consultant based in Cuyahoga
-                Falls, Ohio. With 9 books to his name — spanning business, productivity, westerns,
-                and crime fiction — Jim has navigated every stage of the self-publishing journey
+                I&apos;m a published author and book publishing consultant based in Cuyahoga Falls,
+                Ohio. With 9 books to my name — spanning business, productivity, westerns, and
+                crime fiction — I&apos;ve navigated every stage of the self-publishing journey
                 firsthand.
               </p>
               <p className="text-slate-400 leading-relaxed mb-8">
-                His consulting work draws directly from that experience: practical, real-world
+                My consulting work draws directly from that experience: practical, real-world
                 guidance for aspiring authors who want to stop overthinking and start publishing.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -383,7 +383,7 @@ export default function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Podcast</p>
               <h2 className="text-4xl text-white mb-4" style={serif}>The Story Builder Podcast</h2>
               <p className="text-slate-400 leading-relaxed mb-6">
-                Join Jim as he breaks down the craft of writing and the business of self-publishing
+                Join me as I break down the craft of writing and the business of self-publishing
                 — with actionable insights for non-fiction authors at every stage of their journey.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -434,8 +434,8 @@ export default function HomePage() {
           <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Newsletter</p>
           <h2 className="text-4xl text-white mb-4" style={serif}>Join the newsletter</h2>
           <p className="text-slate-400 leading-relaxed mb-8 max-w-md mx-auto">
-            Get writing tips, publishing insights, and updates on Story Builder — delivered to
-            your inbox via Jim&apos;s Substack.
+            Get writing tips, publishing insights, and updates on Story Builder — delivered
+            straight to your inbox via my Substack.
           </p>
           <a
             href={SUBSTACK_URL}

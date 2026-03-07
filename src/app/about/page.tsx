@@ -71,28 +71,27 @@ export default function AboutPage() {
             {/* Bio content */}
             <div className="flex-1 space-y-6 text-slate-400 leading-relaxed">
               <p>
-                Jim Woods is a published author and book publishing consultant based in Cuyahoga
-                Falls, Ohio. With 9 books to his name — spanning business, productivity, westerns,
-                and crime fiction — Jim has spent years navigating every stage of the
-                self-publishing journey: writing, editing, formatting, publishing, and marketing.
+                I&apos;m a published author and book publishing consultant based in Cuyahoga Falls,
+                Ohio. With 9 books to my name — spanning business, productivity, westerns, and
+                crime fiction — I&apos;ve spent years navigating every stage of the self-publishing
+                journey: writing, editing, formatting, publishing, and marketing.
               </p>
               <p>
-                His work as a consulting guide grew naturally from that experience. Authors who
-                want to write books — especially non-fiction — often have great ideas but no clear
-                path from those ideas to a finished, published product. Jim provides that path:
-                practical, direct, experience-backed guidance that gets writers moving and keeps
-                them on track.
+                My consulting work grew naturally from that experience. Authors who want to write
+                books — especially non-fiction — often have great ideas but no clear path from
+                those ideas to a finished, published product. I provide that path: practical,
+                direct, experience-backed guidance that gets writers moving and keeps them on track.
               </p>
               <p>
-                Jim&apos;s primary focus is non-fiction: business books, self-help, and memoir with
+                My primary focus is non-fiction: business books, self-help, and memoir with
                 application — the kind of books that teach something, challenge something, or
-                document something worth preserving. He also consults on fiction projects, bringing
-                the same structural thinking to storytelling that he applies to his own western and
+                document something worth preserving. I also consult on fiction projects, bringing
+                the same structural thinking to storytelling that I apply to my own western and
                 crime novels.
               </p>
               <p>
-                His upcoming book, <strong className="text-slate-200">Story Builder</strong>, is
-                the fullest expression of his philosophy: a complete framework for non-fiction
+                My upcoming book, <strong className="text-slate-200">Story Builder</strong>, is
+                the fullest expression of my philosophy: a complete framework for non-fiction
                 authors who want to write books that are structured, readable, and built to last.
                 The companion podcast — also called Story Builder — is available on YouTube and
                 Spotify.

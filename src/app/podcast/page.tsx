@@ -4,9 +4,8 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Story Builder Podcast | Jim Woods",
   description:
-    "The Story Builder podcast with Jim Woods — writing craft and self-publishing insights for non-fiction authors. Available on YouTube and Spotify.",
+    "Story Builder is a podcast hosted by Jim Woods featuring interviews with authors and creators on how to craft great stories. Available on YouTube and Spotify.",
 };
-
 
 const YOUTUBE_URL = "https://www.youtube.com/playlist?list=PL82pjZmiW62RvcvYgytT-EJr_xfV9eZXJ";
 const SPOTIFY_URL = "https://open.spotify.com/show/5l20jU0Nc7BAXxvQBr69JZ";
@@ -14,35 +13,39 @@ const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
 
 const serif = { fontFamily: "var(--font-dm-serif), Georgia, serif" };
 
-
+// TODO: Replace with real episode data in Phase 2
 const episodes = [
   {
     number: "001",
-    title: "Why Most Non-Fiction Books Fail (And What to Do Instead)",
+    guest: "Guest Author Name",
+    title: "How to Build Stories That Actually Hold Together",
     description:
-      "Jim breaks down the most common structural mistakes non-fiction authors make — and introduces the Story Builder framework.",
-    duration: "38 min",
+      "I sit down with a published author to break down the structural decisions behind their book — what worked, what didn't, and what every writer can take away.",
+    duration: "42 min",
   },
   {
     number: "002",
-    title: "The Outline That Actually Works: Building Your Book Architecture",
+    guest: "Guest Author Name",
+    title: "Writing Your First Non-Fiction Book: What Nobody Tells You",
     description:
-      "A practical session on outlining non-fiction books that hold together from first chapter to last — with real examples from Jim's process.",
-    duration: "44 min",
+      "A candid conversation about the gap between having a great idea and delivering a book that earns its reader's time — and how to close it.",
+    duration: "38 min",
   },
   {
     number: "003",
-    title: "Self-Publishing in 2024: What You Need to Know Before You Start",
+    guest: "Guest Creator Name",
+    title: "From Idea to Audience: Building a Brand Around Your Book",
     description:
-      "An honest overview of the self-publishing landscape — costs, timelines, platforms, and the decisions most first-time authors get wrong.",
-    duration: "52 min",
+      "We dig into how creators are using books as the foundation for everything else — podcasts, courses, consulting, and long-term authority.",
+    duration: "50 min",
   },
   {
     number: "004",
-    title: "Writing with Consistency: Building a Habit That Survives Real Life",
+    guest: "Guest Author Name",
+    title: "The Craft of Memoir: How to Tell a True Story That Teaches",
     description:
-      "Jim shares the writing systems he's used across 9 books — and how to build momentum when time and energy are limited.",
-    duration: "35 min",
+      "Memoir with application is one of the most powerful formats in non-fiction. My guest breaks down how to write personal stories that connect and resonate.",
+    duration: "45 min",
   },
 ];
 
@@ -73,8 +76,8 @@ export default function PodcastPage() {
               </p>
               <h1 className="text-5xl text-white" style={serif}>Story Builder</h1>
               <p className="mt-4 text-lg text-slate-400 leading-relaxed max-w-lg">
-                Writing craft and self-publishing insights for non-fiction authors — hosted by
-                Jim Woods.
+                Conversations with authors and creators on how to build stories that matter —
+                hosted by me, Jim Woods.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
                 <a
@@ -107,19 +110,21 @@ export default function PodcastPage() {
           </p>
           <div className="space-y-5 text-slate-400 leading-relaxed">
             <p>
-              Story Builder is a podcast for non-fiction authors who want to write better books
-              and navigate the publishing world with confidence. Hosted by Jim Woods — author of
-              9 books and book publishing consultant — each episode digs into the craft, the
-              process, and the business of getting your book into the world.
+              Story Builder is a podcast I host featuring in-depth conversations with authors and
+              creators about the craft of building great stories. Each episode goes behind the
+              scenes of how real books get written — the structure, the process, the decisions,
+              and the lessons learned along the way.
             </p>
             <p>
-              Whether you&apos;re working on your first manuscript or navigating the self-publishing
-              process for the first time, Story Builder gives you practical tools and honest
-              perspective from someone who has done it repeatedly, across multiple genres.
+              My guests include published authors, storytellers, and creative professionals who
+              have figured out how to take a compelling idea and turn it into something that
+              connects with an audience. Whether you&apos;re writing your first book or your
+              fifth, these conversations will sharpen how you think about your work.
             </p>
             <p>
-              The show is the companion to Jim&apos;s upcoming book — also called Story Builder —
-              which presents his complete framework for non-fiction authors.
+              Story Builder the podcast is distinct from my upcoming book of the same name —
+              though both share the same core belief: that great stories are built, not just
+              written.
             </p>
           </div>
         </div>
@@ -141,6 +146,7 @@ export default function PodcastPage() {
                   <span className="text-xs font-mono text-slate-600">EP {ep.number}</span>
                 </div>
                 <div className="flex-1">
+                  <p className="text-xs text-accent mb-1">with {ep.guest}</p>
                   <h3 className="text-white" style={serif}>{ep.title}</h3>
                   <p className="text-sm text-slate-400 mt-2 leading-relaxed">{ep.description}</p>
                   <div className="mt-4 flex items-center gap-4">
@@ -180,14 +186,40 @@ export default function PodcastPage() {
         </div>
       </section>
 
+      {/* Story Builder Book Callout */}
+      <section className="bg-navy-900 py-16">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="rounded-2xl border border-accent/20 bg-accent/5 p-8 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="text-3xl flex-shrink-0">📖</div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">
+                Also Coming Soon
+              </p>
+              <h3 className="text-2xl text-white mb-2" style={serif}>Story Builder — The Book</h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                While the podcast features conversations with other authors and creators, my
+                upcoming book — Story Builder — is my complete framework for non-fiction writers
+                who want to write books that are structured, readable, and built to last.
+              </p>
+              <Link
+                href="/books"
+                className="inline-flex items-center text-sm text-accent hover:text-accent-light transition-colors"
+              >
+                Learn more about the book →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="bg-navy-900 py-20">
+      <section className="bg-navy-950 py-20">
         <div className="mx-auto max-w-2xl px-6 text-center">
           <h2 className="text-4xl text-white mb-4" style={serif}>
-            Ready to work with Jim directly?
+            Ready to work together?
           </h2>
           <p className="text-slate-400 mb-8">
-            The podcast is free. The consulting takes your book to the next level.
+            The podcast is free. When you&apos;re ready to work on your own book, I&apos;m here.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a

@@ -18,7 +18,7 @@ const services = [
     icon: "✍️",
     tagline: "From blank page to finished manuscript.",
     description:
-      "Book coaching is for writers who have an idea but need structure, accountability, and an experienced guide to help them see it through. Jim works with you 1:1 to develop your book concept, build a chapter outline, and establish a writing process that actually fits your life. Whether you write in 30-minute bursts or dedicated sessions, Jim helps you build momentum and finish.",
+      "Book coaching is for writers who have an idea but need structure, accountability, and someone experienced in their corner to help them see it through. I work with you 1:1 to develop your book concept, build a chapter outline, and establish a writing process that actually fits your life. Whether you write in 30-minute bursts or dedicated sessions, I help you build momentum and finish.",
     includes: [
       "Concept development and clarity sessions",
       "Chapter-by-chapter outlining",
@@ -33,7 +33,7 @@ const services = [
     icon: "📝",
     tagline: "Make your manuscript the best version of itself.",
     description:
-      "Developmental editing goes beyond line-level corrections. Jim reads your full manuscript and provides deep, structural feedback on how the book works as a whole — the logic of your argument, the flow between chapters, the clarity of your core idea, and whether each section earns its place. You'll receive a detailed editorial letter and annotated manuscript.",
+      "Developmental editing goes beyond line-level corrections. I read your full manuscript and provide deep, structural feedback on how the book works as a whole — the logic of your argument, the flow between chapters, the clarity of your core idea, and whether each section earns its place. You'll receive a detailed editorial letter and annotated manuscript.",
     includes: [
       "Full manuscript read-through",
       "Detailed editorial letter",
@@ -48,7 +48,7 @@ const services = [
     icon: "📐",
     tagline: "Publication-ready interior and cover formatting.",
     description:
-      "A great book deserves a professional presentation. Jim handles interior formatting for both print and digital formats — ensuring your book meets the specifications required by Amazon KDP, IngramSpark, and other major platforms. Clean typography, proper margins, and a polished layout that readers trust.",
+      "A great book deserves a professional presentation. I handle interior formatting for both print and digital formats — ensuring your book meets the specifications required by Amazon KDP, IngramSpark, and other major platforms. Clean typography, proper margins, and a polished layout that readers trust.",
     includes: [
       "Print interior formatting (KDP, IngramSpark)",
       "eBook formatting (EPUB, MOBI)",
@@ -63,7 +63,7 @@ const services = [
     icon: "🚀",
     tagline: "Navigate the publishing process with confidence.",
     description:
-      "Self-publishing has never been more accessible — but the process is full of decisions that can overwhelm first-time authors. Jim walks you through every step: setting up your KDP account, obtaining your ISBN, choosing your distribution channels, pricing your book, and preparing for launch. You'll publish with confidence instead of confusion.",
+      "Self-publishing has never been more accessible — but the process is full of decisions that can overwhelm first-time authors. I walk you through every step: setting up your KDP account, obtaining your ISBN, choosing your distribution channels, pricing your book, and preparing for launch. You'll publish with confidence instead of confusion.",
     includes: [
       "Amazon KDP account setup and optimization",
       "ISBN acquisition and assignment",
@@ -78,7 +78,7 @@ const services = [
     icon: "💡",
     tagline: "Strategic guidance at any stage of your project.",
     description:
-      "Not every author needs a full coaching or editing engagement. Book consulting gives you direct access to Jim's expertise for targeted questions and decisions — whether you're choosing between publishing paths, evaluating a cover design, planning a launch, or trying to understand your options. Consulting sessions are focused, efficient, and designed to get you unstuck fast.",
+      "Not every author needs a full coaching or editing engagement. Book consulting gives you direct access to my expertise for targeted questions and decisions — whether you're choosing between publishing paths, evaluating a cover design, planning a launch, or trying to understand your options. Consulting sessions are focused, efficient, and designed to get you unstuck fast.",
     includes: [
       "Publishing path analysis (traditional vs. self)",
       "Launch strategy and planning",

@@ -58,8 +58,8 @@ export default function ContactPage() {
               <div className="text-3xl mb-4">✉️</div>
               <h2 className="text-2xl text-white mb-3" style={serif}>Send an Email</h2>
               <p className="text-slate-400 leading-relaxed mb-6 flex-1">
-                Prefer to send a message first? Reach out directly by email. Jim reads every
-                message and responds personally. Ideal for specific questions, project
+                Prefer to send a message first? Reach out directly by email. I read every
+                message and respond personally. Ideal for specific questions, project
                 inquiries, or if you want to share a bit about what you&apos;re working on before
                 booking a call.
               </p>
@@ -78,7 +78,7 @@ export default function ContactPage() {
             <div>
               <p className="text-white font-medium">Cuyahoga Falls, Ohio</p>
               <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                Jim is based in Cuyahoga Falls and serves clients locally in the Summit County /
+                I&apos;m based in Cuyahoga Falls and work with clients locally in the Summit County /
                 Greater Akron area as well as authors nationwide. All consulting and coaching
                 sessions are available remotely via video call.
               </p>
@@ -96,15 +96,15 @@ export default function ContactPage() {
             {[
               {
                 q: "What kinds of books do you work on?",
-                a: "Primarily non-fiction — business, self-help, and memoir with application. Jim also consults on fiction projects. If you have a manuscript or idea and you're serious about publishing it, reach out.",
+                a: "Primarily non-fiction — business, self-help, and memoir with application. I also consult on fiction projects. If you have a manuscript or idea and you're serious about publishing it, reach out.",
               },
               {
                 q: "Do you work with first-time authors?",
-                a: "Absolutely. Most of Jim's clients are writing their first book. The services are designed to guide you through the process whether you've never written a chapter or you have a draft that needs help.",
+                a: "Absolutely. Most of my clients are writing their first book. My services are designed to guide you through the process whether you've never written a chapter or you have a draft that needs help.",
               },
               {
                 q: "Do you offer in-person sessions?",
-                a: "Jim is based in Cuyahoga Falls, Ohio and is open to in-person sessions for local clients in the greater Akron / Summit County area. All services are also available remotely.",
+                a: "I'm based in Cuyahoga Falls, Ohio and I'm open to in-person sessions for local clients in the greater Akron / Summit County area. All services are also available remotely.",
               },
               {
                 q: "What's the best way to start?",
