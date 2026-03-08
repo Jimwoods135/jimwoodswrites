@@ -1,10 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
+import { localBusinessSchema, personSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Contact | Jim Woods — Book Publishing Consultant",
   description:
     "Book a free discovery call with Jim Woods or send him a message. Based in Cuyahoga Falls, Ohio — serving authors locally and nationwide.",
+  alternates: { canonical: "https://jimwoodswrites.com/contact" },
+  openGraph: {
+    title: "Contact Jim Woods — Book Publishing Consultant",
+    description:
+      "Book a free discovery call or send a message. Based in Cuyahoga Falls, Ohio — serving authors locally and nationwide.",
+    url: "https://jimwoodswrites.com/contact",
+    images: [{ url: "/headshot.jpg", width: 800, height: 1000, alt: "Jim Woods" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Jim Woods — Book Publishing Consultant",
+    description:
+      "Book a free discovery call or send a message. Cuyahoga Falls, Ohio.",
+    images: ["/headshot.jpg"],
+  },
 };
 
 const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
@@ -15,6 +32,8 @@ const serif = { fontFamily: "var(--font-dm-serif), Georgia, serif" };
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={personSchema} />
+      <JsonLd data={localBusinessSchema} />
       {/* Header */}
       <section
         className="pt-32 pb-20"

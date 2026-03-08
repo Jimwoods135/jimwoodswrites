@@ -1,11 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { JsonLd } from "@/components/JsonLd";
+import { personSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "About Jim Woods | Author & Book Publishing Consultant",
   description:
     "Jim Woods is a published author and book publishing consultant based in Cuyahoga Falls, Ohio — with 9 books and years of hands-on self-publishing experience.",
+  alternates: { canonical: "https://jimwoodswrites.com/about" },
+  openGraph: {
+    title: "About Jim Woods — Author & Book Publishing Consultant",
+    description:
+      "Published author and book publishing consultant based in Cuyahoga Falls, Ohio — 9 books and years of hands-on self-publishing experience.",
+    url: "https://jimwoodswrites.com/about",
+    images: [{ url: "/headshot.jpg", width: 800, height: 1000, alt: "Jim Woods" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Jim Woods — Author & Book Publishing Consultant",
+    description:
+      "Published author and book publishing consultant based in Cuyahoga Falls, Ohio — 9 books and years of hands-on experience.",
+    images: ["/headshot.jpg"],
+  },
 };
 
 
@@ -18,6 +35,7 @@ const serif = { fontFamily: "var(--font-dm-serif), Georgia, serif" };
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={personSchema} />
       {/* Header */}
       <section
         className="pt-32 pb-20"

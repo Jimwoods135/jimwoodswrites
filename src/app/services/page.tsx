@@ -1,10 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
+import { localBusinessSchema, personSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Services | Jim Woods — Book Publishing Consultant",
   description:
-    "Book coaching, developmental editing, formatting, self-publishing services, and book consulting for non-fiction and fiction authors.",
+    "Book coaching, developmental editing, formatting, self-publishing services, and book consulting for non-fiction and fiction authors. Based in Cuyahoga Falls, Ohio.",
+  alternates: { canonical: "https://jimwoodswrites.com/services" },
+  openGraph: {
+    title: "Book Publishing Services | Jim Woods",
+    description:
+      "Book coaching, developmental editing, formatting, self-publishing services, and book consulting for non-fiction and fiction authors. Based in Cuyahoga Falls, Ohio.",
+    url: "https://jimwoodswrites.com/services",
+    images: [{ url: "/headshot.jpg", width: 800, height: 1000, alt: "Jim Woods" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book Publishing Services | Jim Woods",
+    description:
+      "Book coaching, developmental editing, formatting, self-publishing, and consulting for non-fiction authors.",
+    images: ["/headshot.jpg"],
+  },
 };
 
 
@@ -93,6 +110,8 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd data={personSchema} />
+      <JsonLd data={localBusinessSchema} />
       {/* Header */}
       <section
         className="pt-32 pb-20"

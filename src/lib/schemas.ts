@@ -1,0 +1,206 @@
+const BASE_URL = "https://jimwoodswrites.com";
+
+export const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jim Woods",
+  url: BASE_URL,
+  image: `${BASE_URL}/headshot.jpg`,
+  jobTitle: "Book Publishing Consultant",
+  description:
+    "Published author and book publishing consultant based in Cuyahoga Falls, Ohio. Specializing in non-fiction book coaching, developmental editing, and self-publishing services.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Cuyahoga Falls",
+    addressRegion: "OH",
+    postalCode: "44221",
+    addressCountry: "US",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/jimwoodspage",
+    "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS",
+    "https://www.youtube.com/playlist?list=PL82pjZmiW62RvcvYgytT-EJr_xfV9eZXJ",
+    "https://open.spotify.com/show/5l20jU0Nc7BAXxvQBr69JZ",
+    "https://authorjimwoods.substack.com/",
+  ],
+};
+
+export const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${BASE_URL}/#business`,
+  name: "Jim Woods — Book Publishing Consultant",
+  description:
+    "Book coaching, developmental editing, book formatting, and self-publishing services for aspiring non-fiction authors. Based in Cuyahoga Falls, Ohio.",
+  url: BASE_URL,
+  email: "Jimwoodswrites@gmail.com",
+  image: `${BASE_URL}/headshot.jpg`,
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Cuyahoga Falls",
+    addressRegion: "OH",
+    postalCode: "44221",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 41.1334,
+    longitude: -81.4845,
+  },
+  areaServed: [
+    { "@type": "City", name: "Cuyahoga Falls" },
+    { "@type": "City", name: "Akron" },
+    { "@type": "AdministrativeArea", name: "Summit County" },
+    { "@type": "State", name: "Ohio" },
+    { "@type": "Country", name: "United States" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Book Publishing Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Book Coaching" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Developmental Editing" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Book Formatting" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Self-Publishing Services" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Book Consulting" } },
+    ],
+  },
+};
+
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  url: BASE_URL,
+  name: "Jim Woods — Author & Book Publishing Consultant",
+  description:
+    "Personal author and book publishing consultant website for Jim Woods. Helping non-fiction writers bring their book into the world.",
+  author: { "@type": "Person", name: "Jim Woods" },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${BASE_URL}/books?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
+
+export const bookSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Story Builder",
+    author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+    image: `${BASE_URL}/book-story-builder.jpg`,
+    description:
+      "Story Builder is Jim Woods' framework for crafting compelling non-fiction narratives that captivate readers and build your authority.",
+    genre: "Business & Self-Help",
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Focus Booster",
+    author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+    image: `${BASE_URL}/book-focus-booster.webp`,
+    description: "A practical guide to improving focus and productivity.",
+    genre: "Business & Productivity",
+    url: "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS",
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Ready Aim Fire",
+    author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+    image: `${BASE_URL}/book-ready-aim-fire.webp`,
+    description: "A results-driven guide for entrepreneurs and professionals.",
+    genre: "Business & Productivity",
+    url: "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS",
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Red Rock Justice",
+    author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+    image: `${BASE_URL}/book-red-rock-justice.webp`,
+    genre: "Western",
+    url: "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS",
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Red Rock Vengeance",
+    author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+    image: `${BASE_URL}/book-red-rock-vengeance.webp`,
+    genre: "Western",
+    url: "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS",
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Standoff at Sundown",
+    author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+    image: `${BASE_URL}/book-standoff-at-sundown.jpg`,
+    genre: "Western",
+    url: "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS",
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Showdown at Bone Ridge",
+    author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+    image: `${BASE_URL}/book-showdown-at-bone-ridge.webp`,
+    genre: "Western",
+    url: "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS",
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Like a Bad Memory",
+    author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+    image: `${BASE_URL}/book-like-a-bad-memory.webp`,
+    genre: "Crime Fiction",
+    url: "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS",
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Pull the Trigger",
+    author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+    image: `${BASE_URL}/book-pull-the-trigger.webp`,
+    genre: "Crime Fiction",
+    url: "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS",
+    inLanguage: "en-US",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: "Bite the Bullet",
+    author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+    image: `${BASE_URL}/book-bite-the-bullet.webp`,
+    genre: "Crime Fiction",
+    url: "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS",
+    inLanguage: "en-US",
+  },
+];
+
+export const podcastSchema = {
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  name: "Story Builder",
+  description:
+    "Story Builder is a podcast hosted by Jim Woods featuring conversations with authors and creators on how to craft great stories. Available on YouTube and Spotify.",
+  url: "https://open.spotify.com/show/5l20jU0Nc7BAXxvQBr69JZ",
+  image: `${BASE_URL}/book-story-builder.jpg`,
+  author: { "@type": "Person", name: "Jim Woods", url: BASE_URL },
+  inLanguage: "en-US",
+  sameAs: [
+    "https://www.youtube.com/playlist?list=PL82pjZmiW62RvcvYgytT-EJr_xfV9eZXJ",
+    "https://open.spotify.com/show/5l20jU0Nc7BAXxvQBr69JZ",
+  ],
+};

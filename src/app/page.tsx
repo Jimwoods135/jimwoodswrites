@@ -1,5 +1,29 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { JsonLd } from "@/components/JsonLd";
+import { personSchema, localBusinessSchema, websiteSchema } from "@/lib/schemas";
+
+export const metadata: Metadata = {
+  title: "Jim Woods | Book Publishing Consultant | Cuyahoga Falls, OH",
+  description:
+    "Jim Woods helps non-fiction writers bring their book into the world. Book coaching, developmental editing, formatting, and self-publishing services based in Cuyahoga Falls, Ohio.",
+  alternates: { canonical: "https://jimwoodswrites.com" },
+  openGraph: {
+    title: "Jim Woods | Book Publishing Consultant | Cuyahoga Falls, OH",
+    description:
+      "Jim Woods helps non-fiction writers bring their book into the world. Book coaching, developmental editing, formatting, and self-publishing services based in Cuyahoga Falls, Ohio.",
+    url: "https://jimwoodswrites.com",
+    images: [{ url: "/headshot.jpg", width: 800, height: 1000, alt: "Jim Woods" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jim Woods | Book Publishing Consultant | Cuyahoga Falls, OH",
+    description:
+      "Jim Woods helps non-fiction writers bring their book into the world. Based in Cuyahoga Falls, Ohio.",
+    images: ["/headshot.jpg"],
+  },
+};
 
 
 const TIDYCAL_URL = "https://tidycal.com/storybuilder/";
@@ -68,6 +92,9 @@ const serif = { fontFamily: "var(--font-dm-serif), Georgia, serif" };
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={personSchema} />
+      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={websiteSchema} />
       {/* ── Hero ── */}
       <section
         className="relative flex min-h-screen items-center justify-center overflow-hidden"

@@ -1,11 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { JsonLd } from "@/components/JsonLd";
+import { bookSchemas, personSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Books | Jim Woods — Author",
   description:
-    "Browse all 9 books by Jim Woods, including business and productivity titles, westerns, and crime novels. Plus: Story Builder, coming soon.",
+    "Browse all 9 books by Jim Woods — business and productivity titles, westerns, and crime novels. Plus Story Builder, coming soon.",
+  alternates: { canonical: "https://jimwoodswrites.com/books" },
+  openGraph: {
+    title: "Books by Jim Woods — Author",
+    description:
+      "Browse all 9 books by Jim Woods — business and productivity titles, westerns, and crime novels. Plus Story Builder, coming soon.",
+    url: "https://jimwoodswrites.com/books",
+    images: [{ url: "/book-story-builder.jpg", width: 800, height: 1200, alt: "Story Builder by Jim Woods" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Books by Jim Woods — Author",
+    description: "Browse all 9 books by Jim Woods — business, westerns, and crime novels. Plus Story Builder, coming soon.",
+    images: ["/book-story-builder.jpg"],
+  },
 };
 
 const AMAZON_URL = "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS";
@@ -50,6 +66,8 @@ function BookCover({ src, alt, className = "" }: { src: string; alt: string; cla
 export default function BooksPage() {
   return (
     <>
+      <JsonLd data={personSchema} />
+      <JsonLd data={bookSchemas as unknown as Record<string, unknown>[]} />
       {/* Header */}
       <section
         className="pt-32 pb-20"

@@ -1,10 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
+import { podcastSchema, personSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
   title: "Story Builder Podcast | Jim Woods",
   description:
     "Story Builder is a podcast hosted by Jim Woods featuring interviews with authors and creators on how to craft great stories. Available on YouTube and Spotify.",
+  alternates: { canonical: "https://jimwoodswrites.com/podcast" },
+  openGraph: {
+    title: "Story Builder Podcast | Jim Woods",
+    description:
+      "Conversations with authors and creators on how to craft great stories. Hosted by Jim Woods. Available on YouTube and Spotify.",
+    url: "https://jimwoodswrites.com/podcast",
+    images: [{ url: "/book-story-builder.jpg", width: 800, height: 1200, alt: "Story Builder Podcast by Jim Woods" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Story Builder Podcast | Jim Woods",
+    description:
+      "Conversations with authors and creators on how to craft great stories. On YouTube and Spotify.",
+    images: ["/book-story-builder.jpg"],
+  },
 };
 
 const YOUTUBE_URL = "https://www.youtube.com/playlist?list=PL82pjZmiW62RvcvYgytT-EJr_xfV9eZXJ";
@@ -52,6 +69,8 @@ const episodes = [
 export default function PodcastPage() {
   return (
     <>
+      <JsonLd data={personSchema} />
+      <JsonLd data={podcastSchema} />
       {/* Header */}
       <section
         className="pt-32 pb-20"
