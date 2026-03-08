@@ -91,16 +91,45 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Location note */}
-          <div className="mt-12 rounded-xl border border-navy-700/60 bg-navy-900 p-6 flex flex-col sm:flex-row gap-4 items-start">
-            <div className="text-2xl">📍</div>
-            <div>
-              <p className="text-white font-medium">Cuyahoga Falls, Ohio</p>
-              <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                I&apos;m based in Cuyahoga Falls and work with clients locally in the Summit County /
-                Greater Akron area as well as authors nationwide. All consulting and coaching
-                sessions are available remotely via video call.
-              </p>
+          {/* Location + Service Area */}
+          <div className="mt-12 rounded-xl border border-navy-700/60 bg-navy-900 p-6">
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
+              <div className="text-2xl">📍</div>
+              <div className="flex-1">
+                <p className="text-white font-medium">Cuyahoga Falls, Ohio</p>
+                <p className="text-sm text-slate-400 mt-1 leading-relaxed">
+                  I&apos;m based in Cuyahoga Falls and available for in-person sessions with clients
+                  in Summit County and the greater Akron area. All services are also available
+                  remotely for Ohio authors and clients nationwide.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {[
+                    "Cuyahoga Falls",
+                    "Akron",
+                    "Hudson",
+                    "Stow",
+                    "Kent",
+                    "Tallmadge",
+                    "Barberton",
+                    "Fairlawn",
+                    "Summit County",
+                    "Northeast Ohio",
+                    "+ Nationwide Remote",
+                  ].map((area) => (
+                    <span
+                      key={area}
+                      className="rounded-full border border-navy-600 bg-navy-800 px-3 py-1 text-xs text-slate-300"
+                    >
+                      {area}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-4 text-xs text-slate-500">
+                  <Link href="/ohio" className="text-accent hover:text-accent-light transition-colors underline underline-offset-2">
+                    Learn more about working with local Ohio authors →
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
         </div>

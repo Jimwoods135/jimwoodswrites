@@ -7,13 +7,14 @@ const AMAZON_URL = "https://www.amazon.com/stores/Jim-Woods/author/B00EYDA7OS";
 const LINKEDIN_URL = "https://www.linkedin.com/in/jimwoodspage";
 const YOUTUBE_URL = "https://www.youtube.com/playlist?list=PL82pjZmiW62RvcvYgytT-EJr_xfV9eZXJ";
 const SPOTIFY_URL = "https://open.spotify.com/show/5l20jU0Nc7BAXxvQBr69JZ";
+const EMAIL = "Jimwoodswrites@gmail.com";
 
 export default function Footer() {
   return (
     <footer className="border-t border-navy-700/50 bg-navy-900">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-10 md:grid-cols-4">
-          {/* Brand */}
+          {/* Brand + NAP */}
           <div className="md:col-span-2">
             <p
               className="text-xl text-white"
@@ -25,6 +26,16 @@ export default function Footer() {
               Author and book publishing consultant based in Cuyahoga Falls, Ohio.
               Let&apos;s bring your book into the world.
             </p>
+            {/* NAP — Name / Address / Contact for local SEO citation consistency */}
+            <address className="mt-4 not-italic text-xs text-slate-500 space-y-1">
+              <p>Cuyahoga Falls, OH 44221</p>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="hover:text-accent transition-colors"
+              >
+                {EMAIL}
+              </a>
+            </address>
             <a
               href={TIDYCAL_URL}
               target="_blank"
@@ -47,6 +58,7 @@ export default function Footer() {
                 ["About", "/about"],
                 ["Podcast", "/podcast"],
                 ["Contact", "/contact"],
+                ["Ohio Authors", "/ohio"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link
