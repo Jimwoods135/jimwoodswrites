@@ -439,13 +439,15 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="w-full max-w-xs flex-shrink-0">
-              <div className="aspect-square rounded-2xl bg-navy-800 border border-navy-700 flex items-center justify-center">
-                <div className="text-center px-4">
-                  <p className="text-xl text-white" style={serif}>Story Builder</p>
-                  <p className="text-sm text-slate-400 mt-2">with Jim Woods</p>
-                  <p className="text-xs text-accent mt-4 uppercase tracking-wider">Podcast Cover Art</p>
-                </div>
+            <div className="w-full max-w-sm flex-shrink-0">
+              <div className="relative aspect-video rounded-2xl overflow-hidden border border-navy-700 shadow-xl">
+                <Image
+                  src="/podcast-cover.png"
+                  alt="Story Builder Podcast with Jim Woods"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 384px"
+                />
               </div>
             </div>
           </div>

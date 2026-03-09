@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd";
 import { podcastSchema, personSchema } from "@/lib/schemas";
 
@@ -13,14 +14,14 @@ export const metadata: Metadata = {
     description:
       "Conversations with authors and creators on how to craft great stories. Hosted by Jim Woods. Available on YouTube and Spotify.",
     url: "https://jimwoodswrites.com/podcast",
-    images: [{ url: "/book-story-builder.jpg", width: 800, height: 1200, alt: "Story Builder Podcast by Jim Woods" }],
+    images: [{ url: "/podcast-cover.png", width: 1280, height: 720, alt: "Story Builder Podcast by Jim Woods" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Story Builder Podcast | Jim Woods",
     description:
       "Conversations with authors and creators on how to craft great stories. On YouTube and Spotify.",
-    images: ["/book-story-builder.jpg"],
+    images: ["/podcast-cover.png"],
   },
 };
 
@@ -78,14 +79,17 @@ export default function PodcastPage() {
       >
         <div className="mx-auto max-w-5xl px-6">
           <div className="flex flex-col gap-10 md:flex-row md:items-center">
-            {/* Podcast art placeholder */}
-            <div className="w-full max-w-[220px] flex-shrink-0">
-              <div className="aspect-square rounded-2xl bg-navy-800 border border-navy-600 flex items-center justify-center shadow-2xl">
-                <div className="text-center px-4">
-                  <p className="text-xl text-white" style={serif}>Story Builder</p>
-                  <p className="text-sm text-slate-400 mt-2">with Jim Woods</p>
-                  <p className="text-xs text-accent mt-4 uppercase tracking-wider">Cover Art</p>
-                </div>
+            {/* Podcast cover art */}
+            <div className="w-full max-w-sm flex-shrink-0">
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-navy-700">
+                <Image
+                  src="/podcast-cover.png"
+                  alt="Story Builder Podcast with Jim Woods"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 384px"
+                  priority
+                />
               </div>
             </div>
 
