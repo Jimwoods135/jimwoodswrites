@@ -97,40 +97,61 @@ export default function HomePage() {
       <JsonLd data={websiteSchema} />
       {/* ── Hero ── */}
       <section
-        className="relative flex min-h-screen items-center justify-center overflow-hidden"
+        className="relative flex min-h-screen items-center overflow-hidden"
         style={{
           background:
             "radial-gradient(ellipse 80% 60% at 50% 0%, #142040 0%, #050D18 65%)",
         }}
       >
-        <div className="mx-auto max-w-3xl px-6 py-32 text-center">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent-light">
-            Book Publishing Consultant · Cuyahoga Falls, Ohio
-          </p>
-          <h1 className="text-5xl font-normal leading-tight text-white sm:text-6xl md:text-7xl" style={serif}>
-            Let&apos;s bring your book{" "}
-            <span className="italic">into the world.</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-slate-400 leading-relaxed">
-            I&apos;m a published author and guide for aspiring non-fiction writers — offering
-            book coaching, developmental editing, formatting, and self-publishing services
-            to help you get your book written and published.
-          </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <a
-              href={TIDYCAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-md bg-accent px-8 py-3 text-base font-medium text-white hover:bg-accent-dark transition-colors"
-            >
-              Book a Free Call
-            </a>
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center rounded-md border border-slate-600 px-8 py-3 text-base font-medium text-slate-200 hover:border-accent hover:text-accent transition-colors"
-            >
-              View Services
-            </Link>
+        <div className="mx-auto max-w-6xl w-full px-6 py-32">
+          <div className="flex flex-col items-center gap-12 md:flex-row md:items-center">
+
+            {/* Text */}
+            <div className="flex-1 text-center md:text-left">
+              <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent-light">
+                Book Publishing Consultant · Cuyahoga Falls, Ohio
+              </p>
+              <h1 className="text-5xl font-normal leading-tight text-white sm:text-6xl md:text-7xl" style={serif}>
+                Let&apos;s bring your book{" "}
+                <span className="italic">into the world.</span>
+              </h1>
+              <p className="mt-6 max-w-xl text-lg text-slate-400 leading-relaxed mx-auto md:mx-0">
+                I&apos;m a published author and guide for aspiring non-fiction writers — offering
+                book coaching, developmental editing, formatting, and self-publishing services
+                to help you get your book written and published.
+              </p>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
+                <a
+                  href={TIDYCAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-md bg-accent px-8 py-3 text-base font-medium text-white hover:bg-accent-dark transition-colors"
+                >
+                  Book a Free Call
+                </a>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center justify-center rounded-md border border-slate-600 px-8 py-3 text-base font-medium text-slate-200 hover:border-accent hover:text-accent transition-colors"
+                >
+                  View Services
+                </Link>
+              </div>
+            </div>
+
+            {/* Headshot */}
+            <div className="w-full max-w-[280px] md:max-w-[340px] flex-shrink-0">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-navy-700">
+                <Image
+                  src="/headshot.jpg"
+                  alt="Jim Woods — Book Publishing Consultant"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 280px, 340px"
+                  priority
+                />
+              </div>
+            </div>
+
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600">
