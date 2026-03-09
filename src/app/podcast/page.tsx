@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     description:
       "Conversations with authors and creators on how to craft great stories. Hosted by Jim Woods. Available on YouTube and Spotify.",
     url: "https://jimwoodswrites.com/podcast",
-    images: [{ url: "/podcast-cover.png", width: 1280, height: 720, alt: "Story Builder Podcast by Jim Woods" }],
+    images: [{ url: "/podcast-cover.jpg", width: 1280, height: 720, alt: "Story Builder Podcast by Jim Woods" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Story Builder Podcast | Jim Woods",
     description:
       "Conversations with authors and creators on how to craft great stories. On YouTube and Spotify.",
-    images: ["/podcast-cover.png"],
+    images: ["/podcast-cover.jpg"],
   },
 };
 
@@ -83,7 +83,7 @@ export default function PodcastPage() {
             <div className="w-full max-w-sm flex-shrink-0">
               <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-navy-700">
                 <Image
-                  src="/podcast-cover.png"
+                  src="/podcast-cover.jpg"
                   alt="Story Builder Podcast with Jim Woods"
                   fill
                   className="object-cover"

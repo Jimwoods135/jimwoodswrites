@@ -463,7 +463,7 @@ export default function HomePage() {
             <div className="w-full max-w-sm flex-shrink-0">
               <div className="relative aspect-video rounded-2xl overflow-hidden border border-navy-700 shadow-xl">
                 <Image
-                  src="/podcast-cover.png"
+                  src="/podcast-cover.jpg"
                   alt="Story Builder Podcast with Jim Woods"
                   fill
                   className="object-cover"
