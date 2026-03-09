@@ -43,7 +43,7 @@ export default function ContactPage() {
           <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-3">Contact</p>
           <h1 className="text-5xl text-white" style={serif}>Let&apos;s Talk</h1>
           <p className="mt-5 text-lg text-slate-400 max-w-xl mx-auto leading-relaxed">
-            Ready to write your book? Have a question about Jim&apos;s services? Reach out — he&apos;d
+            Ready to write your book? Have a question about my services? Reach out — I&apos;d
             love to hear from you.
           </p>
         </div>

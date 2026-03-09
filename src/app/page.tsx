@@ -37,7 +37,7 @@ const services = [
   {
     title: "Book Coaching",
     description:
-      "Work 1:1 with Jim to develop your concept, structure your ideas, and build a writing process that carries you from first word to finished manuscript.",
+      "Work 1:1 with me to develop your concept, structure your ideas, and build a writing process that carries you from first word to finished manuscript.",
     icon: "✍️",
   },
   {
@@ -217,14 +217,14 @@ export default function HomePage() {
               </span>
               <h2 className="text-4xl text-white sm:text-5xl" style={serif}>Story Builder</h2>
               <p className="mt-5 text-lg text-slate-400 leading-relaxed">
-                Jim&apos;s most important book yet — a complete framework for non-fiction authors
+                My most important book yet — a complete framework for non-fiction authors
                 who want to write books that are structured, readable, and built to last. Story
-                Builder distills everything Jim has learned across 9 published books and years of
+                Builder distills everything I&apos;ve learned across 9 published books and years of
                 consulting.
               </p>
               <p className="mt-4 text-slate-400 leading-relaxed">
                 Paired with the Story Builder podcast on YouTube and Spotify, this book is the
-                cornerstone of Jim&apos;s consulting philosophy and the clearest expression of his
+                cornerstone of my consulting philosophy and the clearest expression of my
                 approach to the craft.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
@@ -257,8 +257,8 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Published Works</p>
             <h2 className="text-4xl text-white" style={serif}>9 Books and Counting</h2>
             <p className="mt-4 text-slate-400 max-w-lg mx-auto">
-              From business and productivity to westerns and crime fiction — Jim is a prolific
-              author who has navigated the self-publishing world across multiple genres.
+              From business and productivity to westerns and crime fiction — I&apos;ve navigated
+              the self-publishing world across multiple genres and lived every stage of the process.
             </p>
           </div>
 
@@ -492,7 +492,7 @@ export default function HomePage() {
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-md border border-slate-600 px-8 py-3 text-base font-medium text-slate-200 hover:border-accent hover:text-accent transition-colors"
               >
-                Contact Jim
+                Send a Message
               </Link>
             </div>
           </div>

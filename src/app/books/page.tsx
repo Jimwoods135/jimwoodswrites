@@ -115,9 +115,9 @@ export default function BooksPage() {
               </span>
               <h2 className="text-4xl text-white" style={serif}>Story Builder</h2>
               <p className="mt-4 text-slate-400 leading-relaxed">
-                Jim&apos;s most important book yet — a complete framework for non-fiction authors
+                My most important book yet — a complete framework for non-fiction authors
                 who want to write books that are structured, readable, and built to last. Paired
-                with the Story Builder podcast, this book is the cornerstone of Jim&apos;s
+                with the Story Builder podcast, this book is the cornerstone of my
                 consulting philosophy.
               </p>
               <Link
@@ -172,8 +172,8 @@ export default function BooksPage() {
             Also by Jim Woods
           </p>
           <p className="text-slate-400 text-sm mb-10 max-w-lg">
-            Jim is a prolific author across genres — proof that the writing and publishing process
-            he teaches is one he&apos;s lived.
+            I&apos;m a prolific author across genres — proof that the writing and publishing
+            process I teach is one I&apos;ve lived.
           </p>
 
           <div className="grid gap-12 md:grid-cols-2">
@@ -236,7 +236,7 @@ export default function BooksPage() {
             Ready to add your name to the shelf?
           </h2>
           <p className="text-slate-400 mb-8">
-            Jim has navigated the self-publishing process across 9 books. Let him help you write
+            I&apos;ve navigated the self-publishing process across 9 books. Let me help you write
             and publish yours.
           </p>
           <a
