@@ -47,22 +47,10 @@ const services = [
     icon: "📝",
   },
   {
-    title: "Book Formatting",
-    description:
-      "Professional interior and cover formatting that meets print and digital publishing standards for a polished, reader-ready final product.",
-    icon: "📐",
-  },
-  {
     title: "Self-Publishing Services",
     description:
       "End-to-end guidance through the self-publishing process — from KDP setup to ISBN, distribution channels, and launch strategy.",
     icon: "🚀",
-  },
-  {
-    title: "Book Consulting",
-    description:
-      "Strategic advisory at any stage of your project — concept, manuscript, publishing, or post-launch — to help you make smart, informed decisions.",
-    icon: "💡",
   },
 ];
 
@@ -186,19 +174,18 @@ export default function HomePage() {
             ))}
 
             {/* CTA card */}
-            <div className="rounded-xl border border-accent/30 bg-accent/10 p-6 flex flex-col justify-between">
+            <div className="lg:col-span-3 rounded-xl border border-accent/30 bg-accent/10 p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <h3 className="text-xl text-white mb-2" style={serif}>Not sure where to start?</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">
-                  Book a free discovery call and we&apos;ll map out exactly what you need to get
-                  your book written and published.
+                <h3 className="text-xl text-white mb-1" style={serif}>Not sure where to start?</h3>
+                <p className="text-sm text-slate-400">
+                  Book a free discovery call and we&apos;ll map out exactly what you need.
                 </p>
               </div>
               <a
                 href={TIDYCAL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center justify-center rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-white hover:bg-accent-dark transition-colors"
+                className="flex-shrink-0 inline-flex items-center justify-center rounded-md bg-accent px-6 py-2.5 text-sm font-medium text-white hover:bg-accent-dark transition-colors"
               >
                 Book a Free Call
               </a>
