@@ -57,6 +57,7 @@ export default function Footer() {
                 ["Books", "/books"],
                 ["About", "/about"],
                 ["Podcast", "/podcast"],
+                ["Blog", "/blog"],
                 ["Contact", "/contact"],
                 ["Ohio Authors", "/ohio"],
               ].map(([label, href]) => (
